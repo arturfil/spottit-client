@@ -35,7 +35,7 @@ export class SignUpComponent implements OnInit {
   }
 
   signupSubmit() {
-    this.authThang.postLogin(this.loginUser)
+    this.authThang.postSignup(this.newUser)
       .subscribe(
         (userInfo) => {
           this.routerThang.navigate(['']);
@@ -46,6 +46,23 @@ export class SignUpComponent implements OnInit {
             this.loginError = "Bad Credentials";
           } else {
             this.loginError = "Something went wrong. Try again later."
+          }
+        }
+      );
+  }
+
+  loginSubmit() {
+    this.authThang.postLogin(this.loginUser)
+      .subscribe(
+        (userInfo) => {
+          this.routerThang.navigate(['']);
+        },
+        (errInfo) => {
+          console.log('Log in error', errInfo);
+          if (errInfo.status === 401) {
+            this.loginError = "Bad Credentials";
+          } else {
+            this.loginError = "Something went wrong. Try again later"
           }
         }
       );
