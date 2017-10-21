@@ -14,13 +14,34 @@ export class SpotApiService {
   ) { }
 
   // GET/api/items
-  getItems() {
+  getSpots() {
     return this.httpThang.get(
-      this.baseUrl + '/api/items'
+      this.baseUrl + '/api/spots'
     );
   }
 
   // GET/api/items/ID
-  
+  getSpotDetails(spotId: string){
+    return this.httpThang.get(
+      this.baseUrl + '/api/spots/' + spotId
+    );
+  }
+
+  //POST/api/spots
+  postSpot(spotFields: SpotInfo) {
+    return this.httpThang.post(
+      this.baseUrl + '/api/spots/',
+      spotFields,
+      { withCredentials: true }
+    );
+  }
+
+  //GET/api/myspots
+  getMyItems() {
+    return this.httpThang.get(
+      this.baseUrl + '/api/myitems',
+      { withCredentials: true }
+    );
+  }
 
 }
