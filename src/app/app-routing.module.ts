@@ -7,12 +7,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { IndexComponent } from './pages/index/index.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { LoginComponent } from './pages/login/login.component';
+import { SpotsListComponent } from './pages/spots-list/spots-list.component';
 
 
 const routes: Routes = [
   {path: '', component: IndexComponent },
   {path: 'signup', component: SignUpComponent },
-  {path: 'login', component: LoginComponent }
+  {path: 'login', component: LoginComponent },
+  {path: 'spots', component: SpotsListComponent }
 ]
 
 @NgModule({
