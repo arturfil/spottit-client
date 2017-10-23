@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthApiService } from '../../services/auth-api.service';
 
 @Component({
   selector: 'app-index',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
 
-  constructor() { }
+  userInfo: any;
+
+  constructor(
+    private authThang: AuthApiService
+  ) { }
 
   ngOnInit() {
+    this.authThang.getLoginStatus()
+      .subscribe(
+        (loggedInInfo: any) => {
+          if (loggedInInfo.isLoggedIn) {
+            this.userInfo = loggedInInfo.userInfo;
+          }
+        }
+      )
   }
 
 }

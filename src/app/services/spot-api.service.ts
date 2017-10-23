@@ -37,11 +37,11 @@ export class SpotApiService {
   }
 
   //GET/api/myspots
-  getMyItems() {
+  getMySpots(){
     return this.httpThang.get(
-      this.baseUrl + '/api/myitems',
-      { withCredentials: true }
-    );
+      this.baseUrl + '/api/myspots',
+      {withCredentials: true}
+    )
   }
 
 }
