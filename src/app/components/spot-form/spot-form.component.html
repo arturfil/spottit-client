@@ -1,0 +1,29 @@
+<h3> Add Item </h3>
+
+<form class="signup-form" (ngSubmit)="saveNewSpot()">
+  <label for="spot-name-input"> New Spot Name </label>
+  <br>
+  <input id="spot-name-input" type="text"
+  name="itemName" [(ngModel)]="queryInput" [(ngModel)]="newSpot.spotName">
+  <br>
+
+  <label for="spot-address-input"> Address </label>
+  <br>
+  <input id="spot-address-input" type="text"
+  name="spotAddress" [(ngModel)]="newSpot.spotAddress">
+  <br>
+
+  <label for="spot-image-input"> Image </label>
+  <br>
+  <input class="image-input" id="spot-image-input" type="file" name="SpotImage"
+  placeholder="ulpload file" ng2FileSelect [uploader]="myUploader">
+  <img [src]="newSpot.spotImage">
+
+  <label for="spot-workout-input"> Workout Type </label>
+  <br>
+  <input id="spot-workout-input" type="text"
+  name="spotAddress" [(ngModel)]="newSpot.spotWorkout">ß
+  <br>
+  <br>
+  <button> Add New Spot </button>
+</form>

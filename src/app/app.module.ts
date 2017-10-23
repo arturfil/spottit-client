@@ -6,6 +6,7 @@ import { FileUploadModule } from 'ng2-file-upload';
 
 //services
 import { AuthApiService } from './services/auth-api.service';
+import { SpotApiService } from './services/spot-api.service';
 
 //components
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +17,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SpotsListComponent } from './pages/spots-list/spots-list.component';
+import { SpotFormComponent } from './components/spot-form/spot-form.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { SpotsListComponent } from './pages/spots-list/spots-list.component';
     LoginComponent,
     NavbarComponent,
     FooterComponent,
-    SpotsListComponent
+    SpotsListComponent,
+    SpotFormComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,9 @@ import { SpotsListComponent } from './pages/spots-list/spots-list.component';
     FileUploadModule
   ],
   providers: [
-    AuthApiService
+    AuthApiService,
+    SpotApiService
+
   ],
   bootstrap: [AppComponent]
 })
