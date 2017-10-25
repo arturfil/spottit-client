@@ -19,6 +19,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SpotsListComponent } from './pages/spots-list/spots-list.component';
 import { SpotFormComponent } from './components/spot-form/spot-form.component';
 import { MySpotsComponent } from './pages/my-spots/my-spots.component';
+import { SpotDetailsComponent } from './pages/spot-details/spot-details.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MySpotsComponent } from './pages/my-spots/my-spots.component';
     FooterComponent,
     SpotsListComponent,
     SpotFormComponent,
-    MySpotsComponent
+    MySpotsComponent,
+    SpotDetailsComponent
   ],
   imports: [
     BrowserModule,

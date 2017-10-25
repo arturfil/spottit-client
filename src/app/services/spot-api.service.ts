@@ -44,4 +44,13 @@ export class SpotApiService {
     )
   }
 
+  //DELETE/api/spots/ID
+  deleteSpot(spotId: string) {
+    return this.httpThang.delete(
+      this.baseUrl + '/api/spots' + spotId,
+      {withCredentials: true}
+    )
+  }
+
+
 }

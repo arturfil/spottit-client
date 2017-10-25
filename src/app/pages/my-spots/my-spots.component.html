@@ -29,6 +29,9 @@
         <h3> {{ oneSpot.name }} </h3>
         <p> {{ oneSpot.workout }}</p>
         <p> {{ oneSpot.address }}</p>
+        <a [routerLink]="['/spots', oneSpot._id]">
+          Spot Details
+        </a>
       </li>
     </ul>
   </div>

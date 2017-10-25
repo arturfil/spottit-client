@@ -1,0 +1,19 @@
+<div class="details container">
+  <div class="row">
+
+    <div class="img col-md-6 col-sm-12">
+      <img [src]="imageDomain + spotInfo.image" alt="">
+    </div>
+
+    <div class="info col-md-6 col-sm-12">
+      <h2> {{ spotInfo.name }}</h2>
+      <p> Workout type: {{ spotInfo.workout }} </p>
+      <p> {{ itemInfo.address }}</p>
+
+      <button (click)="deleteClick()">
+        Delete Item
+      </button>
+    </div>
+
+  </div>
+</div>
