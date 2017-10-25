@@ -18,7 +18,7 @@ export class MySpotsComponent implements OnInit {
   imageDomain = environment.apiUrl;
   errorMessage: string;
 
-  mySpots: any[] = [];
+  spots: any[] = [];
   isFormOn = false;
   userInfo: any;
 
@@ -28,19 +28,12 @@ export class MySpotsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.spotThang.getMySpots()
+    this.spotThang.getSpots()
       .subscribe(
-        (listOfSpots: any[]) => {
-          this.mySpots = listOfSpots;
-        },
-        (errInfo) => {
-          if (errInfo.status === 401) {
-            this.errorMessage = "You need to be logged in.";
-          } else {
-            this.errorMessage = 'Something went wrong. Try again later';
-          }
+        (spotsFromApi: any[]) => {
+          this.spots = spotsFromApi;
         }
-      )
+      );
   }
 
   showsForm() {
@@ -52,7 +45,7 @@ export class MySpotsComponent implements OnInit {
   }
 
   handleNewSpot(submissionInfo) {
-    this.mySpots.unshift(submissionInfo.spot);
+    this.spots.unshift(submissionInfo.spot);
     this.isFormOn = false;
   }
 
