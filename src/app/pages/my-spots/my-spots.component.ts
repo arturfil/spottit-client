@@ -6,7 +6,7 @@ import { AuthApiService } from '../../services/auth-api.service';
 import { environment } from  '../../../environments/environment';
 
 //components
-//import { SpotFromComponent }
+import { SpotFormComponent } from '../../components/spot-form/spot-form.component';
 
 @Component({
   selector: 'app-my-spots',

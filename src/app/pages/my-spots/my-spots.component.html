@@ -7,7 +7,7 @@
 </div>
 <br>
 
-<div class="my-spots container">
+<div class="container">
   <div class="row">
     <div class="col-md-3">
       <h2> Your Spots </h2>
@@ -25,12 +25,7 @@
 
     <ul *ngIf="!isFormOn">
       <li class="col-md-3 col-sm-3 item-card" *ngFor="let oneSpot of mySpots">
-        <img [src]="imageDomain + oneSpot.image">
         <h3> {{ oneSpot.name }} </h3>
-        <p> {{ oneSpot.address }}</p>
-        <a [routerLink]="['/spots', oneSpot._id]">
-          See Details
-        </a>
       </li>
     </ul>
   </div>
