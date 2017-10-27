@@ -47,7 +47,7 @@ export class SpotDetailsComponent implements OnInit {
     this.spotThang.deleteSpot(this.spotInfo._id)
       .subscribe(
         () => {
-          this.routerThang.navigate(['/spots']);
+          this.routerThang.navigate(['']);
         }
       )
   }
