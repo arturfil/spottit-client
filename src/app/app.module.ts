@@ -20,6 +20,7 @@ import { SpotsListComponent } from './pages/spots-list/spots-list.component';
 import { SpotFormComponent } from './components/spot-form/spot-form.component';
 import { MySpotsComponent } from './pages/my-spots/my-spots.component';
 import { SpotDetailsComponent } from './pages/spot-details/spot-details.component';
+import { ChatDialogComponent } from './chat/chat-dialog/chat-dialog.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SpotDetailsComponent } from './pages/spot-details/spot-details.componen
     SpotsListComponent,
     SpotFormComponent,
     MySpotsComponent,
-    SpotDetailsComponent
+    SpotDetailsComponent,
+    ChatDialogComponent
   ],
   imports: [
     BrowserModule,
