@@ -17,6 +17,8 @@ ul {
   margin-bottom: 30px;
   height: 400px;
   width: 350px;
+  margin-right: 20px;
+  opacity: .5;
 }
 .list-card a {
   text-align: center;
