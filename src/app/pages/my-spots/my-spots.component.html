@@ -25,7 +25,7 @@
 
     <ul *ngIf="!isFormOn">
       <li class="col-md-3 col-sm-3 item-card" *ngFor="let oneSpot of spots">
-        <img [src]="imageDomain + oneSpot.image" alt="">
+        <img [src]="oneSpot.image" alt="">
         <h3> {{ oneSpot.name }} </h3>
         <p> {{ oneSpot.workout }}</p>
         <p> {{ oneSpot.address }}</p>
