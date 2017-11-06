@@ -3,14 +3,16 @@
   <div class="  container">
     <div class="row">
       <h2> Spots in Miami to workout </h2>
-        <ul>
+        <ul class="block">
           <li class=" list-card col-md-4" *ngFor="let oneSpot of spots">
-            <img [src]="oneSpot.image">
+            <div class="middle">
+              <img [src]="oneSpot.image">
+            </div>
             <br>
 
             <br>
             <a [routerLink]="['/spots', oneSpot._id]">
-              <h3> {{ oneSpot.name }}</h3>
+              <h3 class="text"> {{ oneSpot.name }}</h3>
             </a>
           </li>
         </ul>

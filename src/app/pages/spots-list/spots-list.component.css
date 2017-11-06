@@ -9,6 +9,7 @@ img {
   max-width: 350px;
   margin-top: 30px;
   margin-bottom: -230px;
+  opacity: 1; 
 }
 ul {
   list-style: none;
@@ -18,16 +19,25 @@ ul {
   height: 400px;
   width: 350px;
   margin-right: 20px;
-  opacity: .5;
 }
 .list-card a {
   text-align: center;
-  color: white;
+  color:white;
   border: 1px solid black;
   width: 350px;
   font-weight: 600;
   text-transform: uppercase;
+  list-style: none;
+  text-decoration: none;
+  text-decoration-style: none;
 }
 .list-card h3 {
   font-size: 40px;
+  list-style: none;
+  text-decoration-style: none;
+  text-decoration: none;
 }
+
+
+
+
